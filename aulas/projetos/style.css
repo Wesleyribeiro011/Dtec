@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family:sans-serif;
+  background-color: #ffffff;
+  color: #3e2c1c;
+}
+
+
+header {
+  background-color: #5e3829;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.boas-vindas p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.galeria .cartoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.botao-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #d9a074;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  width: 180px;
+}
+
+.botao-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.botao-card span {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.botao-card:hover {
+  background-color: #d9a074;
+  transform: scale(1.05);
+}
+
+
+footer {
+  background-color: #5e3829;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
