@@ -1,39 +1,21 @@
-document.getElementById('addBtn').addEventListener('click', addTask);
-
-function addTask() {
-  const taskInput = document.getElementById('taskInput');
-  const taskText = taskInput.value.trim();
-
-  if (taskText === '') {
-    alert('Digite uma tarefa!');
+document.getElementById('addBtn').onclick = () => {
+  const input = document.getElementById('taskInput');
+  const text = input.value.trim();
+  if (!text) {
     return;
   }
 
-  const taskList = document.getElementById('taskList');
-
-  // Criar elementos
   const li = document.createElement('li');
-  const span = document.createElement('span');
-  const removeBtn = document.createElement('button');
+  li.innerHTML = `<span>${text}</span><button>Remover</button>`;
 
-  span.textContent = taskText;
-  removeBtn.textContent = 'Remover';
-
-  // Adicionar evento para marcar como feito
-  span.addEventListener('click', () => {
+  li.querySelector('span').onclick = () => {
     li.classList.toggle('done');
-  });
+  };
 
-  // Adicionar evento para remover
-  removeBtn.addEventListener('click', () => {
+  li.querySelector('button').onclick = () => {
     li.remove();
-  });
+  };
 
-  // Montar item da lista
-  li.appendChild(span);
-  li.appendChild(removeBtn);
-  taskList.appendChild(li);
-
-  // Limpar campo
-  taskInput.value = '';
-}
+  document.getElementById('taskList').appendChild(li);
+  input.value = '';
+};
